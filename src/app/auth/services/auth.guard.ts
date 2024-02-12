@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core'
 import {
   ActivatedRouteSnapshot,
-  CanActivate,
-  CanActivateChild,
   Router,
   RouterStateSnapshot,
 } from '@angular/router'
@@ -12,7 +10,7 @@ import {tap} from 'rxjs/operators'
 import {isLoggedInSelector} from '../../auth/store/selectors'
 
 @Injectable()
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard {
   isLoggedIn$: Observable<boolean>
 
   constructor(
