@@ -24,6 +24,7 @@ import {AuthInterceptor} from './shared/services/auth-interceptor.service'
       : StoreDevtoolsModule.instrument({
           maxAge: 25,
           logOnly: environment.production,
+          connectInZone: true,
         }),
     StoreRouterConnectingModule.forRoot(),
   ],
